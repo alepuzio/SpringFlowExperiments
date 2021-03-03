@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+						http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	<view-state id="firstStepId" view="hello/firstStep">
+		<transition on="secondStep" to="secondStepId" />
+	</view-state>
+	<view-state id="secondStepId" view="hello/secondStep">
+		<transition on="firstStep" to="firstStepId" />
+		<transition on="lastStep" to="lastStepId" />
+	</view-state>
+	<end-state id="lastStepId" view="hello/lastStep" />
+</flow>
