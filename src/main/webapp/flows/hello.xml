@@ -5,7 +5,7 @@
 						http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 	<view-state id="firstStepId" view="hello/firstStep">
 		<transition on="secondStep" to="secondStepId" />
-	</view-state>
+	</view-state><!-- from https://williamarchibaldspooner.wordpress.com/2014/04/06/spring-web-flow-2-0-hello-world/ -->
 	<view-state id="secondStepId" view="hello/secondStep">
 		<transition on="firstStep" to="firstStepId" />
 		<transition on="lastStep" to="lastStepId" />
